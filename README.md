@@ -4,5 +4,6 @@
 
 ## Sekvensdiagram för Analys
 ### Skapa Fil (Analys)
-![cF.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/cF.drawio.png)
-### 
+![skapaFil.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/skapaFil.drawio.png)
+### Öppna Fil (Analys)
+![openFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/openFile.drawio.png)
