@@ -1,4 +1,4 @@
-# Resultat för analys
+# Resultat från Analys
 ## Use case diagram
 ![test.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/test.png)
 
@@ -23,3 +23,10 @@
 ![saveFileAs.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/saveFileAs.drawio.png)
 ### Stäng Fil (Analys)
 ![exitFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/exitFile.drawio.png)
+
+# Resultat från Design
+## Klassdiagram för Design
+![]()
+
+## Sekvensdiagram för Design
+![]()
