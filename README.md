@@ -34,4 +34,4 @@
 ### Öppna Fil (Design)
 ![openFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/openFile.drawio.png)
 ### Spara Fil (Design)
-![]()
+![saveFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/saveFile.drawio.png)
