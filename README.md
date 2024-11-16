@@ -1,28 +1,28 @@
 # Resultat från Analys
 ## Use case diagram
-![test.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/test.png)
+![test.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/test.png)
 
 ## Sekvensdiagram för Analys
 ### Skapa Fil (Analys)
-![skapaFil.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/skapaFil.drawio.png)
+![skapaFil.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/skapaFil.drawio.png)
 ### Öppna Fil (Analys)
-![openFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/openFile.drawio.png)
+![openFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/openFile.drawio.png)
 ### Spara Fil (Analys)
-![saveFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/saveFile.drawio.png)
+![saveFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/saveFile.drawio.png)
 ### Ändra Fil (Analys)
-![editFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/editFile.drawio.png)
+![editFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/editFile.drawio.png)
 ### Skriva Text (Analys)
-![writeFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/writeText.drawio.png)
+![writeFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/writeText.drawio.png)
 ### Klippa Ut Text (Analys)
-![cutText.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/cutText.drawio.png)
+![cutText.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/cutText.drawio.png)
 ### Kopiera Text (Analys)
-![copyText.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/copyText.drawio.png)
+![copyText.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/copyText.drawio.png)
 ### Klistra in Text (Analys)
-![pasteText.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/pasteText.drawio.png)
+![pasteText.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/pasteText.drawio.png)
 ### Spara Fil Som (Analys)
-![saveFileAs.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/saveFileAs.drawio.png)
+![saveFileAs.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/saveFileAs.drawio.png)
 ### Stäng Fil (Analys)
-![exitFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/exitFile.drawio.png)
+![exitFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/analys/exitFile.drawio.png)
 
 # Resultat från Design
 ## Klassdiagram för Design
