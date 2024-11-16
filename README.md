@@ -31,3 +31,7 @@
 ## Sekvensdiagram för Design
 ### Skapa Fil (Design)
 ![createFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/createFile.drawio.png)
+### Öppna Fil (Design)
+![openFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/openFile.drawio.png)
+### Spara Fil (Design)
+![]()
