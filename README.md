@@ -13,7 +13,7 @@
 ![editFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/editFile.drawio.png)
 ### Skriva Text (Analys)
 ![writeFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/writeText.drawio.png)
-### Klippa Text (Analys)
+### Klippa Ut Text (Analys)
 ![cutText.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/cutText.drawio.png)
 ### Kopiera Text (Analys)
 ![copyText.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/copyText.drawio.png)
