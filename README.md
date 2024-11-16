@@ -32,8 +32,8 @@
 #### Förklaring av metoder mellan FileManager ---> :File
 ##### new File() – Skapar en ny fil. 
 ##### readFile() – Läser in en fil.
-##### readText() – Hämtar det innehåll som ska klistras in.
-##### getContent() – Hämtar det som klistras in.
+##### readText() – Hämtar textinnehållet från en fil.
+##### getContent() – Hämtar det innehåll som ska klistras in.
 ##### setFileName() och getFileName() – Hanterar filens namn.
 
 ### Skapa Fil (Design)
