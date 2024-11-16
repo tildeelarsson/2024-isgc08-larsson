@@ -29,7 +29,7 @@
 ![]()
 
 ## Sekvensdiagram för Design
-#### Förklaring:
+#### Förklaring av metoder mellan FileManager ---> :File
 ##### new File() – Skapar en ny fil. 
 ##### readFile() – Läser in en fil.
 ##### readText() – Hämtar det innehåll som ska klistras in.
