@@ -31,8 +31,7 @@
 ## Sekvensdiagram för Design
 <div style="border: 1px solid #f2c411; background-color: #fff9c4; padding: 15px; border-radius: 8px; font-size: 14px; width: fit-content; max-width: 300px; margin: 10px auto; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);">
 
-**💡 Notis:** 
-##### Förklaring av metoder mellan :FileManager ---> :File
+**💡 Förklaring av metoder mellan :FileManager ---> :File:** 
 ###### new File() – Skapar en ny fil. 
 ###### readFile() – Läser in filen.
 ###### readText() – Hämtar textinnehållet från en fil.
