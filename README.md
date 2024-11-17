@@ -26,7 +26,7 @@
 
 # Resultat från Design
 ## Klassdiagram för Design
-![]()
+![Klassdiagram.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/Klassdiagram.drawio.png)
 
 ## Sekvensdiagram för Design
 #### Förklaring av metoder mellan FileManager ---> :File
