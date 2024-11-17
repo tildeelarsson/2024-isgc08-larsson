@@ -33,7 +33,8 @@
 ##### new File() – Skapar en ny fil. 
 ##### readFile() – Läser in en fil.
 ##### readText() – Hämtar textinnehållet från en fil.
-##### getContent() – Hämtar det innehåll som ska klistras in.
+##### getContent() - Hämtar det innehåll som ska klistras in vid pasteText()
+##### setContent() - Sätter det innehållet som get hämtat.
 ##### setFileName() och getFileName() – Hanterar filens namn.
 
 ### Skapa Fil (Design)
