@@ -27,10 +27,10 @@
 # Resultat från Design
 ## Klassdiagram för Design
 ![Klassdiagram.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/Klassdiagram.drawio.png)
-
-<div align="center" style="border: 2px solid black; padding: 10px; border-radius: 5px;">
   
 ## Sekvensdiagram för Design
+<div align="center" style="border: 2px solid black; padding: 10px; border-radius: 5px;">
+  
 #### Förklaring av metoder mellan :FileManager ---> :File
 ##### new File() – Skapar en ny fil. 
 ##### readFile() – Läser in filen.
