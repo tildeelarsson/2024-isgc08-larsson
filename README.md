@@ -51,7 +51,7 @@
 ### Kopiera Text (Design)
 ![copyText.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/copyText.drawio.png)
 ### Klistra In Text (Design)
-![pasteText.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/pasteText.drawio.png)
+![minasparadefilerförGIT.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/mina%20sparade%20filer%20för%20GIT.drawio.png)
 ### Spara Fil Som (Design)
 ![saveFileAs.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/saveFileAs.drawio.png)
 ### Stäng fil (Design)
