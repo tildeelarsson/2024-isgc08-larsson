@@ -29,15 +29,15 @@
 ![Klassdiagram.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/Klassdiagram.drawio.png)
   
 ## Sekvensdiagram för Design
-<div align="center" style="border: 2px solid black; padding: 10px; border-radius: 5px;">
-  
-#### Förklaring av metoder mellan :FileManager ---> :File
-##### new File() – Skapar en ny fil. 
-##### readFile() – Läser in filen.
-##### readText() – Hämtar textinnehållet från en fil.
-##### getContent() - Hämtar det innehåll som ska klistras in vid pasteText()
-##### setContent() - Sätter det innehållet som getContent() hämtat.
-##### setFileName() och getFileName() – Hanterar filens namn.
+<div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 10px; border-radius: 5px; font-size: 12px; width: fit-content; margin: 10px auto;">
+
+**Notis:** Förklaring av metoder mellan :FileManager ---> :File
+new File() – Skapar en ny fil. 
+readFile() – Läser in filen.
+readText() – Hämtar textinnehållet från en fil.
+getContent() - Hämtar det innehåll som ska klistras in vid pasteText()
+getContent() - Sätter det innehållet som getContent() hämtat.
+setFileName() och getFileName() – Hanterar filens namn.
 </div>
 
 ### Skapa Fil (Design)
