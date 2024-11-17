@@ -56,4 +56,4 @@
 ### Spara Fil Som (Design)
 ![saveFileAs.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/saveFileAs.drawio.png)
 ### Stäng fil (Design)
-![exitFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/exitFile.drawio.png)
+![exitFile2.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/exitFile2.drawio.png)
