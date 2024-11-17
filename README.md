@@ -31,13 +31,14 @@
 ## Sekvensdiagram för Design
 <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 10px; border-radius: 5px; font-size: 12px; width: fit-content; margin: 10px auto;">
 
-**Notis:** Förklaring av metoder mellan :FileManager ---> :File
-new File() – Skapar en ny fil. 
-readFile() – Läser in filen.
-readText() – Hämtar textinnehållet från en fil.
-getContent() - Hämtar det innehåll som ska klistras in vid pasteText()
-getContent() - Sätter det innehållet som getContent() hämtat.
-setFileName() och getFileName() – Hanterar filens namn.
+**Notis:** 
+##### Förklaring av metoder mellan :FileManager ---> :File
+###### new File() – Skapar en ny fil. 
+###### readFile() – Läser in filen.
+###### readText() – Hämtar textinnehållet från en fil.
+###### getContent() - Hämtar det innehåll som ska klistras in vid pasteText()
+###### getContent() - Sätter det innehållet som getContent() hämtat.
+###### setFileName() och getFileName() – Hanterar filens namn.
 </div>
 
 ### Skapa Fil (Design)
