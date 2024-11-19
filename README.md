@@ -59,6 +59,6 @@
 ### Klistra In Text (Design)
 ![minasparadefilerförGIT.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/mina%20sparade%20filer%20för%20GIT.drawio.png)
 ### Spara Fil Som (Design)
-![saveFileAs2.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/saveFileAs2.drawio.png)
+![nysaveAsFile.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/nySaveAsFile.drawio.png)
 ### Stäng fil (Design)
 ![exitFile2.drawio.png](https://github.com/tildeelarsson/2024-isgc08-larsson/blob/main/design/exitFile2.drawio.png)
