@@ -3,7 +3,9 @@ package labb3;
 import javax.swing.*;
 import java.awt.*;
 
-public class TextEditorView implements TextEditorViewInterface {
+public class TextEditorView implements IView {
+	
+
 private JFrame frame;
 private JTextArea area;
 private JMenuBar menuBar;
@@ -11,6 +13,7 @@ private JMenu edit;
 private JMenuItem write, copy, cut, paste;
 private JButton createFile, openFile, saveFile, saveFileAs, exitFile;
 private JPanel panel;
+
 public TextEditorView() {
 frame = new JFrame("Text Editor");
 area = new JTextArea(20, 50);
@@ -18,7 +21,6 @@ frame.add(new JScrollPane(area), BorderLayout.CENTER);
 menuBar = new JMenuBar();
 panel = new JPanel();
 area.setEditable(false);
-setWelcomeText();
 edit = new JMenu("Edit");
 write = new JMenuItem("Write");
 copy = new JMenuItem("Copy");
@@ -47,6 +49,11 @@ frame.setSize(600, 400);
 frame.getContentPane().setBackground(new Color(255, 182, 193)); // RGB för ljus rosa
 frame.setVisible(true);
 }
+
+public void setWelcomeText(String text) {
+    area.setText(text);
+}
+
 public void addCreateListener(Runnable listener) {
 createFile.addActionListener(e -> listener.run());
 }
@@ -74,14 +81,7 @@ cut.addActionListener(e -> listener.run());
 public void addPasteListener(Runnable listener) {
 paste.addActionListener(e -> listener.run());
 }
-public void setWelcomeText() {
-area.setText("Välkommen till TextEditor! \n"
-		+ "För att skriva --> skapa eller öppna en fil & tryck på edit --> write.\n"
-		+ "För att kopiera, klippa eller klistra in markera och tryck på edit.\n"
-	    + "Lycka till!");
-		
 
-}
 public void showMessage(String message, String title) {
 JOptionPane.showMessageDialog(null, message, title, JOptionPane.INFORMATION_MESSAGE);
 }
@@ -140,14 +140,17 @@ return null;
 }
 return fileName;
 }
-
 @Override
 public void displayMenu() {
-    // Grafiska menyer hanteras via GUI-komponenter, så denna kan lämnas tom.
+	 // Grafiska menyer hanteras via GUI-komponenter, så denna kan lämnas tom.
 }
-
 @Override
 public int getUserChoice() {
-    return -1; // Returnera dummy-värde, hanteras inte i GUI.
+	  // Tomt: Ingen användning i konsolvyn
+	return -1;
+}
+public String getFileContentUI() {
+	// Tomt: Ingen användning i konsolvyn
+	return "";
 }
 }
