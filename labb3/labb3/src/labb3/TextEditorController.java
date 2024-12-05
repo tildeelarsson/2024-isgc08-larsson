@@ -11,81 +11,19 @@ public class TextEditorController  {
     public TextEditorController(IView view, FileManager fM) {
         this.view = view;
         this.fM = fM;
-        
-        if (view instanceof TextEditorView) {
-            view.addCreateListener(this::handleCreateFile);
-            view.addOpenListener(this::handleOpenFile);
-            view.addSaveListener(this::handleSaveFile);
-            view.addSaveAsListener(this::handleSaveFileAs);
-            view.addExitListener(this::handleExit);
-            view.addWriteListener(this::handleWrite);
-            view.addCopyListener(this::handleCopy);
-            view.addCutListener(this::handleCut);
-            view.addPasteListener(this::handlePaste);
-            view.setWelcomeText("Välkommen!\n"
-                    + "För att skriva --> skapa eller öppna en fil & tryck på edit --> write.\n"
-                    + "För att kopiera, klippa eller klistra in markera och tryck på edit.\n"
-                    + "Lycka till!");
-            }
-        
+   
+       // Här kopplas metoder från controller till lyssnare i vyerna.
+        view.addOpenListener(this::handleOpenFile);
+        view.addCreateListener(this::handleCreateFile);
+        view.addWriteListener(this::handleWrite);
+        view.addSaveListener(this::handleSaveFile);
+        view.addExitListener(this::handleExit);
+        view.addSaveAsListener(this::handleSaveFileAs);
+        view.addCopyListener(this::handleCopy);
+        view.addCutListener(this::handleCut);
+        view.addPasteListener(this::handlePaste);
         }
  
-    public void handleUserChoice() {
-        if (view instanceof ConsoleView) {
-            ConsoleView consoleView = (ConsoleView) view;
-            boolean running = true;
-
-            while (running) {
-                consoleView.displayMenu();
-                int choice = consoleView.getUserChoice();
-
-                switch (choice) {
-                    case 1:
-                        String fileName = consoleView.getFileNameUI();
-                        try {
-                            fM.openFile(new File(fileName));
-                            String content = fM.getContentFile();
-                            consoleView.viewCurr(content);
-                        } catch (IOException e) {
-                            consoleView.showError("Fel vid öppning: " + e.getMessage());
-                        }
-                        break;
-                    case 2:
-                        fileName = consoleView.getFileNameUI();
-                        System.out.println("Ange innehåll att spara:");
-                        String fileContent = consoleView.getFileContentUI();
-                        try {
-                            fM.saveFile(fileName, fileContent);
-                            consoleView.showMessage("Filen har sparats.", "");
-                        } catch (IOException e) {
-                            consoleView.showError("Fel vid sparning: " + e.getMessage());
-                        }
-                        break;
-                    case 3:
-                        fileName = consoleView.getFileNameUI();
-                        fileContent = consoleView.getFileContentUI();
-                        try {
-                            fM.createFile(fileName);
-                            fM.saveFile(fileName, fileContent);
-                            consoleView.showMessage("Ny fil skapad och sparad: " + fileName, "Skapa fil");
-                        } catch (IOException e) {
-                            consoleView.showError("Fel vid skapandet: " + e.getMessage());
-                        }
-                        break;
-                    case 4:
-                        consoleView.showMessage("Programmet avslutas.", "Avsluta");
-                        running = false;
-                        consoleView.closeView();
-                        break;
-                    default:
-                        consoleView.showError("Ogiltigt val.");
-                        break;
-                }
-            }
-        }
-    }
-    
-
     private void handleCreateFile() {
         String fileName = view.getFileNameUI();
         try {
@@ -178,14 +116,13 @@ public class TextEditorController  {
                     break;
             }
         } else {
-            view.showMessage("Filen är redan sparad. Programmet avslutas nu.", "Ingen osparad ändring");
+            view.showMessage("Filen är redan sparad. Programmet avslutas nu.", "Ingen osparad ändring"); //Funderar på om man skriver själva texten här eler i vyerna.
             System.exit(0);
         }
     }
 
     private void handleWrite() {
-        view.setTextAreaEditable(true);
-        view.showMessage("Skrivläge aktiverat", "Info");
+    	view.write();
     }
 
     private void handleCopy() {
@@ -213,11 +150,7 @@ public class TextEditorController  {
         fM.paste();
         view.setTextArea(fM.getContentFile());
     }
-    
         
-        public void setView(IView view) {
-            this.view = view;
-        }
        
     }
 

@@ -45,21 +45,21 @@ contentBuilder.append(line).append("\n");
 }
 this.file.setFileName(file.getAbsolutePath());
 this.file.setContent(contentBuilder.toString());
-currentFileName = this.file.getFileName();
-isUnsaved = false;
+currentFileName = this.file.getFileName(); //Får filnamnet från FileClass genom anrop till metoden getFileName.
+isUnsaved = false; //Sätter den till sparad när en fil har öppnats. (Kravet var automatisk sparning vid öppning)
 }
 
-public void saveFile(String fileName, String content) throws IOException {
+public void saveFile(String fileName, String content) throws IOException { //Meotd som tar emot filnamn och content från filklassen.
 file.setFileName(fileName);
 file.setContent(content);
 file.writeFile(fileName, content);
-isUnsaved = false;
+isUnsaved = false; //Det ska sparas vid spara.
 }
 
 public void saveFileAs(String content, String filePath) throws IOException {
 file.setContent(content);
 file.setFileName(filePath);
-isUnsaved = false;
+isUnsaved = false; //Det ska sparas vid spara som.
 }
 
 public boolean isUnsaved() {
@@ -75,7 +75,7 @@ isUnsaved = true;
 
 public void copy(String textToCopy) {
 file.setContent(textToCopy);
-isUnsaved = true;
+isUnsaved = true; // inte sparat
 }
 
 public void cut(String textToCut) {
@@ -84,18 +84,18 @@ clipboard = textToCut;
 String currentContent = file.getContent();
 String updatedContent = currentContent.replace(textToCut, "");
 file.setContent(updatedContent);
-isUnsaved = true;
+isUnsaved = true; // inte sparat
 }
 }
 
 public void paste() {
 String currentContent = file.getContent();
 file.setContent(currentContent + clipboard);
-isUnsaved = true;
+isUnsaved = true; // inte sparat
 }
 
 public String getContentFile() {
-return file.getContent();
+return file.getContent(); //Returnerar getcontent metoden från fileclass (som returnerar content).
 }
 
 }
