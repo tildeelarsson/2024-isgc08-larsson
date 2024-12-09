@@ -1,6 +1,10 @@
-package labb3;
+package controler;
 
 import javax.swing.*;
+
+import model.FileManager;
+import view.IView;
+
 import java.io.*;
 
 public class TextEditorController  {

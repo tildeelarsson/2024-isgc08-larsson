@@ -1,4 +1,4 @@
-package labb3;
+package model;
 
 import java.io.*;
 import javax.swing.*;

@@ -1,5 +1,9 @@
-package labb3;
+package main;
 
+import controler.TextEditorController;
+import model.FileManager;
+import view.IView;
+import view.ViewFactory;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package labb3;
+package view;
 
 //Alla metoder i båda vyer, kanske finns ett smartare sätt?
 public interface IView {

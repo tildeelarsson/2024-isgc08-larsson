@@ -1,4 +1,4 @@
-package labb3;
+package view;
 
 import java.util.Scanner;
 

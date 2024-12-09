@@ -1,6 +1,7 @@
-package labb3;
+package view;
 
 import javax.swing.*;
+
 import java.awt.*;
 
 public class TextEditorView implements IView {
