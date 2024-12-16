@@ -1,22 +1,34 @@
 package main;
-
-import controler.TextEditorController;
-import model.FileManager;
-import view.IView;
-import view.ViewFactory;
+import view.*;
+import controler.*;
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
- 
-        IView view = ViewFactory.createView(); //CreateView finns i viewfactory och där hanteras valet om vilken vy som ska köras. Controller är ovetandes om vilken.
-        
-        FileManager fM = new FileManager();
-        
-     // Skapa en instans av TextEditorController och koppla ihop den med IView och FileManager för att kunna köra programmet.
-        TextEditorController controller = new TextEditorController(view, fM);
-     
-     //Hämtar från IView som implementeras i båda vyerna. Visar det man vill skriva i vyerna på startsidan.
-        view.displayMenu(); 
-    }
-}
 
+	public static void main(String[] args) {
+		try (Scanner scanner = new Scanner(System.in)) {
+			System.out.println("Välj användargränssnitt:");
+			System.out.println("1. Konsolvy");
+			System.out.println("2. Grafisk TextEditor");
+
+			String choice = scanner.nextLine();
+			String viewType = "console"; 
+
+			if ("1".equals(choice)) {
+				viewType = "console";
+			} else if ("2".equals(choice)) {
+				viewType = "gui";
+			} else {
+				System.out.println("Ogiltigt val, Konsollvyn visas nu.");
+			}
+
+
+			TextEditorController controller = new TextEditorController(); 
+			IView view = ViewFactory.createView(viewType, controller);
+			controller.setView(view);
+
+
+			view.displayMenu();
+		}
+	}
+}
