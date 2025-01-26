@@ -1,4 +1,5 @@
 package controler;
+
 import model.FileManager;
 import view.IView;
 import java.io.*;
@@ -11,122 +12,97 @@ public class TextEditorController {
 		fM = new FileManager();
 	}
 
-
 	public void setView(IView view) {
 		this.view = view;
 	}
 
-	public void handleEvent(String eventType) {
-		switch (eventType) {
-		case "Create":
-			handleCreate();
-			break;
-		case "Open":
-			handleOpen();
-			break;
-		case "Save":
-			handleSave();
-			break;
-		case "SaveAs":
-			handleSaveAs();
-			break;
-		case "Exit":
-			handleExit();
-			break;
-		case "Write":
-			handleWrite();
-			break;
-		case "Copy":
-			handleCopy();
-			break;
-		case "Cut":
-			handleCut();
-			break;
-		case "Paste":
-			handlePaste();
-			break;
-		default:
-			view.showMessage("Okänd händelse: " + "", "Error");
+	public void handleEvent(String choice) {
+		switch (choice) {
+		case "Exit" -> handleExit();
+		case "Create" -> handleCreate();
+		case "Open" -> handleOpen();
+		case "Save" -> handleSave();
+		case "Save file as" -> handleSaveAs();
+		default -> view.showMessage("Okänt val: " + choice, "Error");
+		}
+	}
+
+	public void handleOperation(String operation) {
+		switch (operation) {
+		case "Copy" -> handleCopy();
+		case "Cut" -> handleCut();
+		case "Paste" -> handlePaste();
+		default -> view.showMessage("Okänd operation: " + operation, "Error");
 		}
 	}
 
 	public void handleCreate() {
-        String fileName = view.getFileNameUI();
-        if (fileName != null && !fileName.trim().isEmpty()) {
-            fM.createFile(fileName);
-            view.viewCurr(""); 
-            view.showMessage("Ny fil skapad: " + fileName, "Info");
-        } else {
-        	view.showMessage("Fel vid skapandet: " + "", "Error");
-        }
-    }
-
-	
-	public void handleOpen() {
-	    String filePath = view.getFileNameUI();
-	    if (filePath == null || filePath.isEmpty()) {
-	        view.showMessage("Ingen fil vald." +"", "Error");
-	        return;
-	    }
-	    
-	    try {
-	        String content = fM.openFile(filePath);
-	        view.showMessage("Filens innehåll:" + "", "Innehåll");
-	        view.viewCurr(content);
-	    } catch (IOException e) {
-	        view.showMessage("Fel vid öppning: " + e.getMessage(), "Error");
-	    }
+		String fileName = view.getFileNameUI();
+		if (fileName != null && !fileName.trim().isEmpty()) {
+			fM.createFile(fileName);
+			view.viewCurr("");
+			view.showMessage("Ny fil skapad: " + fileName, "Info");
+		} else {
+			view.showMessage("Fel vid skapandet: " + "", "Error");
+		}
 	}
 
+	public void handleOpen() {
+		String filePath = view.getFileNameUI();
+		if (filePath == null || filePath.isEmpty()) {
+			view.showMessage("Ingen fil vald." + "", "Error");
+			return;
+		}
+
+		try {
+			String content = fM.openFile(filePath);
+			view.showMessage("Filens innehåll:" + "", "Innehåll");
+			view.viewCurr(content);
+		} catch (IOException e) {
+			view.showMessage("Fel vid öppning: " + e.getMessage(), "Error");
+		}
+	}
 
 	public void handleSave() {
-	    String content = view.getContent(); 
-	    String fileName = fM.getCurrentFileName();
-	    
-	    if (fileName == null || fileName.isEmpty()) {
-	        view.showMessage("Inget filnamn är angivet. Vänligen skapa eller spara filen först.", "Error");
-	        return;
-	    }
+		String content = view.getContent();
+		String fileName = fM.getCurrentFileName();
 
-	    try {
-	        fM.saveFile(content, fileName);
-	        view.showMessage("Fil sparad: " + fileName, "Info");
-	    } catch (IOException e) {
-	        view.showMessage("Fel vid sparande: " + e.getMessage(), "Error");
-	    }
+		if (fileName == null || fileName.isEmpty()) {
+			view.showMessage("Inget filnamn är angivet. Vänligen skapa eller spara filen först.", "Error");
+			return;
+		}
+
+		try {
+			fM.saveFile(content, fileName);
+			view.showMessage("Fil sparad: " + fileName, "Info");
+		} catch (IOException e) {
+			view.showMessage("Fel vid sparande: " + e.getMessage(), "Error");
+		}
 	}
-
 
 	public void handleSaveAs() {
-	    String content = view.getTextArea(); 
-	    String filePath = view.getFilePath(); 
-	    
-	    if (filePath != null) {
-	        try {
-	            fM.saveFileAs(content, filePath); 
-	            view.showMessage("Fil sparad som: " + filePath, "Info");
-	            System.exit(0);
-	        } catch (IOException e) {
-	            view.showMessage("Fel: " + e.getMessage(), "Error");
-	        }
-	    } else {
-	        view.showMessage("Spara som avbröts.", "Error");
-	    }
-	}
+		String content = view.getTextArea();
+		String filePath = view.getFilePath();
 
+		if (filePath != null) {
+			try {
+				fM.saveFileAs(content, filePath);
+				view.showMessage("Fil sparad som: " + filePath, "Info");
+				System.exit(0);
+			} catch (IOException e) {
+				view.showMessage("Fel: " + e.getMessage(), "Error");
+			}
+		} else {
+			view.showMessage("Spara som avbröts.", "Error");
+		}
+	}
 
 	public void handleExit() {
-	    if (fM.isUnsaved()) {
-	        view.showConfirmDialog();
-	    } else {
-	        System.exit(0);
-	    }
-	}
-
-	public void handleWrite() {
-		view.setTextAreaEditable(true);
-		String content = view.getTextArea();
-		fM.setContent(content);
+		if (fM.isUnsaved()) {
+			view.showConfirmDialog();
+		} else {
+			System.exit(0);
+		}
 	}
 
 	public void handleCopy() {
@@ -156,5 +132,3 @@ public class TextEditorController {
 	}
 
 }
-
-

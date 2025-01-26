@@ -28,7 +28,7 @@ public class Main {
 			controller.setView(view);
 
 
-			view.displayMenu();
+			view.runUI();
 		}
 	}
 }
